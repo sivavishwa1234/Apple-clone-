@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apple Navbar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Lexend', sans-serif;
+    }
+  </style>
+</head>
+<body>
+<!-- Navbar -->
+<div class="bg-gray-100/40 backdrop-blur sticky top-0 transition z-50">
+  <div class="flex items-center justify-between px-4 md:px-6 lg:px-12 text-sm p-[14px] font-lexend text-black">
+    <!-- Apple Logo -->
+    <div class="hover:text-gray-800 cursor-pointer transition flex items-center justify-center w-6 h-6">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 384 512">
+        <path d="M318.7 268.6c-.3-43.6 19.2-76.8 60.3-100.9-22.6-32.9-56.7-51.4-101.8-55.4-42.7-3.8-89 24.8-105 24.8s-55.2-24-90.6-23.3c-46.7.7-85.8 27.1-108.9 68.6C-8.1 237 9.6 308 30.6 346.6c20.4 37.4 45.4 79.5 79.1 77.8 31.7-1.5 43.8-20.6 82.3-20.6 38.4 0 49.2 20.6 82.8 20.1 34.2-.5 55.9-37.9 75.6-75.5 13-25.1 18.2-38.1 18.3-38.2-.4-.1-35.1-13.6-35.1-54.6zM259.3 89.6c25.4-30.8 23.6-59.1 22.8-69.6-22 1.2-47.4 15.1-62.7 34.1-13.7 17-25.7 44.4-22.5 70.6 24.2 1.9 49-12.2 62.4-35.1z"/>
+      </svg>
+    </div>
+
+    <!-- Nav Links -->
+    <ul class="hidden md:flex items-center md:space-x-4 lg:space-x-9 md:text-xs lg:text-sm">
+      <li class="hover:text-gray-800 cursor-pointer transition">Store</li>
+      <li class="hover:text-gray-800 cursor-pointer transition">Mac</li>
+      <li class="hover:text-gray-800 cursor-pointer transition">iPad</li>
+      <li class="hover:text-gray-800 cursor-pointer transition">iPhone</li>
+      <li class="hover:text-gray-800 cursor-pointer transition">Watch</li>
+      <li class="hover:text-gray-800 cursor-pointer transition">AirPods</li>
+      <li class="hover:text-gray-800 cursor-pointer transition">TV & Home</li>
+      <li class="hover:text-gray-800 cursor-pointer transition">Entertainment</li>
+      <li class="hover:text-gray-800 cursor-pointer transition">Accessories</li>
+      <li class="hover:text-gray-800 cursor-pointer transition">Support</li>
+    </ul>
+
+    <!-- Icons -->
+    <ul class="flex items-center space-x-6">
+      <!-- Search Icon -->
+      <li class="hover:text-gray-800 cursor-pointer transition flex items-center justify-center w-6 h-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 512 512">
+          <path d="M505 442.7l-99.7-99.7C429.8 304.8 448 256.6 448 205.3 448 92 348 0 224 0S0 92 0 205.3 100 410.7 224 410.7c51.3 0 99.5-18.2 137.7-51.7l99.7 99.7c4.5 4.5 10.6 7 17 7s12.5-2.5 17-7c9.4-9.4 9.4-24.6 0-34zM224 368c-89.5 0-162-70.2-162-162.7S134.5 43 224 43s162 70.2 162 162.3S313.5 368 224 368z"/>
+        </svg>
+      </li>
+
+      <!-- Cart Icon -->
+      <li class="hover:text-gray-800 cursor-pointer transition flex items-center justify-center w-6 h-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 576 512">
+          <path d="M528.12 301.319l47.273-208A16 16 0 0 0 560 64H120l-8.24-32.96A16 16 0 0 0 96 16H16A16 16 0 0 0 0 32v32a16 16 0 0 0 16 16h58.39l70.53 282.26c-20.38 17.25-33.62 43.32-33.62 72.74 0 53.02 42.98 96 96 96s96-42.98 96-96c0-8.84-1.22-17.36-3.46-25.52h110.92c-2.24 8.16-3.46 16.68-3.46 25.52 0 53.02 42.98 96 96 96s96-42.98 96-96c0-36.39-20.15-68.22-49.88-84.68zM183.6 320l-36.61-144H504l-30.63 144H183.6z"/>
+        </svg>
+      </li>
+
+      <!-- Hamburger (Mobile) -->
+      <li class="md:hidden hover:text-gray-800 cursor-pointer transition flex items-center justify-center w-6 h-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current" viewBox="0 0 448 512">
+          <path d="M0 88C0 74.75 10.75 64 24 64H424c13.25 0 24 10.75 24 24s-10.75 24-24 24H24C10.75 112 0 101.25 0 88zM0 248c0-13.25 10.75-24 24-24H424c13.25 0 24 10.75 24 24s-10.75 24-24 24H24C10.75 272 0 261.25 0 248zM424 400H24c-13.25 0-24 10.75-24 24s10.75 24 24 24H424c13.25 0 24-10.75 24-24s-10.75-24-24-24z"/>
+        </svg>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Promo Banner -->
+<div class="flex lg:flex-row flex-col items-center justify-center text-sm text-gray-600 gap-1 mt-2 p-1 px-4 text-center lg:text-left">
+  <p class="font-medium max-w-[90%] lg:max-w-none">
+    Get up to 12 months of No Cost EMI◊ plus up to ₹8000.00 instant cashback‡ on selected products with eligible cards.
+  </p>
+  <button class="text-blue-600 mt-1 lg:mt-0">
+    <a href="#">Shop &gt;</a>
+  </button>
+</div>
+  <!-- Hero Section -->
+<div class="w-full mt-3 relative overflow-hidden">
+  <!-- Hero Image -->
+  <img alt="Apple products for college" class="w-full h-[85vh] object-cover" src="https://www.apple.com/v/ipad-10.9/b/images/overview/hero/hero__ecv967jz1y82_large.jpg">
+  
+  <!-- Main Headline -->
+  <div class="absolute top-[28%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#007AFF] text-[34px] md:text-[56px] leading-[40px] md:leading-[60px] px-8 py-6 text-white font-semibold rounded-3xl whitespace-nowrap">
+    Buy Mac or iPad for college
+    <div class="absolute top-[-20px] right-[-100px] flex flex-col items-end">
+      <img alt="iPad Sticker" class="w-[150px] rotate-[-2deg] drop-shadow-lg -mt-2 z-10" src="./images/ipad_sticker.png">
+      <img alt="Mac Sticker" class="w-[80px] absolute top-[90px] left-8 rotate-[-2deg] drop-shadow-lg" src="./images/mac_sticker.png">
+    </div>
+  </div>
+
+  <!-- Education Banner -->
+  <div class="absolute top-[46%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] md:w-[400px] h-[60px]">
+    <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 614 94" preserveAspectRatio="none">
+      <path fill="#007AFF" d="M598.708,68.2V46.847l-0.009.007A44.66,44.66,0,0,0,554.255,2.041L45.484,1.957a44.85,44.85,0,0,0-.052,89.7L554.2,91.739a44.091,44.091,0,0,0,29.025-10.847c0.054,0.063.1,0.127,0.157,0.192,13.2,15.237,27.881,9.657,27.881,9.657C603.816,89.025,598.708,78.722,598.708,68.2Z"></path>
+      <foreignObject x="0" y="0" width="100%" height="100%">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="flex justify-center items-center w-full h-full">
+          <p class="text-[28px] md:text-[36px] font-bold text-white m-0 p-2">with education savings*</p>
+        </div>
+      </foreignObject>
+    </svg>
+  </div>
+
+
+
+  <!-- Shop Button -->
+  <div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-10">
+    <button class="transition-all duration-300 cursor-pointer px-8 py-3 rounded-3xl border-2 border-[#007AFF] text-[#007AFF] bg-white hover:text-white hover:bg-[#007AFF] text-lg font-semibold shadow-md hover:shadow-lg active:scale-95">
+      Shop now
+    </button>
+  </div>
+</div>
+<!-- Additional Sections -->
+    <section class="w-full mt-3 relative">
+      <div class="hidden lg:block"><img alt="Mac for student (desktop)" class="w-full h-[90vh] object-cover" src="./images/h2.jpg"></div>
+      <div class="block lg:hidden"><img alt="Mac for student (mobile & tablet)" class="w-full h-[80vh] object-cover" src="./hero_2.jpg"></div>
+      <div class="absolute top-[85%] left-1/2 -translate-x-1/2">
+        <div class="inline-block shadow transition cursor-pointer bg-white text-black px-5 py-2 rounded-3xl hover:bg-white/40">Learn more</div>
+      </div>
+    </section>
+
+    <section class="w-full mt-3 relative">
+      <img alt="mac banner" class="w-full h-[85vh] object-cover" src="./images/hero_3_max.jpg">
+      <div class="absolute top-16 font-lexend left-1/2 -translate-x-1/2 flex flex-col gap-3 text-center px-3">
+        <h1 class="font-semibold text-5xl">MacBook Air</h1>
+        <div class="space-y-2">
+          <p class="text-2xl">Sky blue colour.</p>
+          <p class="text-2xl">Sky high performance with M4.</p>
+        </div>
+        <div class="flex gap-3 justify-center items-center">
+          <div class="inline-block transition cursor-pointer text-sm px-3 py-1.5 bg-[#007AFF] text-white rounded-3xl">Learn more</div>
+          <div class="inline-block transition cursor-pointer text-sm px-3 py-1.5 border border-[#007AFF] text-[#007AFF] rounded-3xl hover:bg-[#007AFF] hover:text-white">Buy</div>
+        </div>
+      </div>
+      <div class="absolute bottom-16 left-1/2 -translate-x-1/2 text-center px-2">
+        <h3 class="text-xl bg-gradient-to-r from-[#0090F7] via-[#BA62FC] to-[#F55600] bg-clip-text text-transparent font-medium">Built for Apple Intelligence</h3>
+      </div>
+    </section>
+
+  </div>
+  <div class="overflow-x-hidden">
+    <!-- iPad Air & iPhone -->
+    <div class="flex flex-col md:flex-row">
+      <!-- iPad Air -->
+      <div class="w-full md:w-1/2 h-[520px] md:h-[550px] relative">
+        <img alt="ipad" class="w-full h-full object-cover object-center" src="./images/ipad_air.jpg">
+        <div class="absolute top-10 left-1/2 -translate-x-1/2 text-center px-3">
+          <div class="flex gap-2 items-center justify-center">
+            <h1 class="font-semibold text-3xl md:text-4xl">iPad</h1>
+            <img alt="iPad Air" class="w-[40px] md:w-[50px]" src="./images/ipad_sticker.png">
+          </div>
+          <p class="text-lg mt-2 mb-2">Supercharged by the <b>M3</b>.</p>
+          <div class="flex gap-3 justify-center">
+            <button class="px-4 py-2 text-sm bg-[#007AFF] text-white rounded-3xl">Learn more</button>
+            <button class="px-4 py-2 text-sm border border-[#007AFF] text-[#007AFF] rounded-3xl hover:bg-[#007AFF] hover:text-white">Buy</button>
+          </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+          <h3 class="text-base bg-gradient-to-r from-[#0090F7] via-[#F2416B] to-[#F55600] bg-clip-text text-transparent">Built for Apple Intelligence</h3>
+        </div>
+      </div>
+
+      <!-- iPhone -->
+      <div class="w-full md:w-1/2 h-[520px] md:h-[550px] relative">
+        <img alt="iphone" class="w-full h-full object-cover object-center" src="./images/iphone.jpg">
+        <div class="absolute top-12 left-1/2 -translate-x-1/2 text-center px-3">
+          <h1 class="font-semibold text-4xl">iPhone</h1>
+          <p class="text-lg mt-1 mb-3">The iPhone 16 family.</p>
+          <div class="flex gap-3 justify-center">
+            <button class="px-4 py-2 text-sm bg-[#007AFF] text-white rounded-3xl">Learn more</button>
+            <button class="px-4 py-2 text-sm border border-[#007AFF] text-[#007AFF] rounded-3xl hover:bg-[#007AFF] hover:text-white">Shop</button>
+          </div>
+        </div>
+        <div class="absolute top-[195px] left-1/2 -translate-x-1/2">
+          <h3 class="text-base bg-gradient-to-r from-[#0090F7] via-[#F2416B] to-[#F55600] bg-clip-text text-transparent">Built for Apple Intelligence</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- MacBook Pro & iPad Pro -->
+    <div class="flex flex-col md:flex-row">
+      <!-- MacBook Pro -->
+      <div class="w-full md:w-1/2 h-[520px] md:h-[550px] relative">
+        <img alt="macbook" class="w-full h-full object-cover object-center" src="./images/macbook.jpg">
+        <div class="absolute top-14 left-1/2 -translate-x-1/2 text-center px-3 text-white">
+          <h1 class="font-semibold text-4xl">MacBook Pro</h1>
+          <p class="text-lg">A work of smart.</p>
+          <div class="flex gap-3 justify-center mt-2">
+            <button class="px-4 py-2 text-sm bg-[#007AFF] text-white rounded-3xl">Learn more</button>
+            <button class="px-4 py-2 text-sm border border-[#007AFF] text-[#007AFF] rounded-3xl hover:bg-[#007AFF] hover:text-white">Buy</button>
+          </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+          <h3 class="text-base bg-gradient-to-r from-[#0090F7] via-[#F2416B] to-[#F55600] bg-clip-text text-transparent">Built for Apple Intelligence</h3>
+        </div>
+      </div>
+
+      <!-- iPad Pro -->
+      <div class="w-full md:w-1/2 h-[520px] md:h-[550px] relative">
+        <img alt="iPad Pro" class="w-full h-full object-cover object-center" src="./images/ipad_pro.jpg">
+        <div class="absolute top-14 left-1/2 -translate-x-1/2 text-center px-3 text-white">
+          <h1 class="font-semibold text-4xl">iPad Pro</h1>
+          <p class="text-lg">Thin. Powerful. Pro.</p>
+          <div class="flex gap-3 justify-center mt-2">
+            <button class="px-4 py-2 text-sm bg-[#007AFF] text-white rounded-3xl">Learn more</button>
+            <button class="px-4 py-2 text-sm border border-[#007AFF] text-[#007AFF] rounded-3xl hover:bg-[#007AFF] hover:text-white">Buy</button>
+          </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+          <h3 class="text-base bg-gradient-to-r from-[#0090F7] via-[#F2416B] to-[#F55600] bg-clip-text text-transparent">Built for Apple Intelligence</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- AirPods & Trade In -->
+    <div class="flex flex-col md:flex-row">
+      <!-- AirPods -->
+      <div class="w-full md:w-1/2 h-[520px] md:h-[550px] relative">
+        <img alt="AirPods" class="w-full h-full object-cover object-center" src="./images/airpods.jpg">
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-center px-3 text-white">
+          <h1 class="font-semibold text-4xl">AirPods 4</h1>
+          <p class="text-lg">Iconic. Now supersonic.</p>
+          <p class="text-lg">Available with Active Noise Cancellation. <sup>2</sup></p>
+          <div class="flex gap-3 justify-center mt-2">
+            <button class="px-4 py-2 text-sm bg-[#007AFF] text-white rounded-3xl">Learn more</button>
+            <button class="px-4 py-2 text-sm border border-[#007AFF] text-[#007AFF] rounded-3xl hover:bg-[#007AFF] hover:text-white">Buy</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trade In -->
+      <div class="w-full md:w-1/2 h-[520px] md:h-[550px] relative">
+        <img alt="Trade In" class="w-full h-full object-cover object-center" src="./images/tradein.jpg">
+        <div class="absolute top-14 left-1/2 -translate-x-1/2 text-center px-3 text-black">
+          <h1 class="font-semibold text-4xl">Trade In</h1>
+          <p class="text-lg">Upgrade and save. It’s that easy.</p>
+          <div class="flex gap-3 justify-center mt-2">
+            <button class="px-4 py-2 text-sm bg-[#007AFF] text-white rounded-3xl">Get your estimate</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Movie Posters Section -->
+<section class="w-full bg-white">
+  <div class="relative">
+    <!-- Left and Right Gradient Masks -->
+    <div class="absolute top-0 left-0 h-full w-16 sm:w-32 xl:w-52 bg-white/70 z-10"></div>
+    <div class="absolute top-0 right-0 h-full w-16 sm:w-32 md:w-[120px] xl:w-52 bg-white/70 z-10"></div>
+
+    <!-- Poster Carousel -->
+    <div class="overflow-x-auto no-scrollbar bg-white/60 backdrop-blur py-1 relative z-0">
+      <div class="flex w-max gap-3 sm:gap-4 px-3">
+
+        <!-- Repeat This Block for Each Poster -->
+        <!-- Poster 1 -->
+        <div class="relative shrink-0 w-[70vw] h-[90vw] sm:w-[400px] sm:h-[400px] md:w-[580px] md:h-[500px] lg:w-[800px] lg:h-[580px] xl:w-[1250px] xl:h-[660px]">
+          <img alt="Movie 1" class="w-full h-full object-cover block sm:hidden" src="./gorge_small.jpg">
+          <img alt="Movie 1" class="w-full h-full object-cover hidden sm:block" src="./images/Movie_poster_2.jpg">
+          <div class="absolute bottom-4 left-3 right-3 text-white">
+            <div class="flex flex-col sm:flex-row items-center sm:items-start lg:items-center gap-2 sm:gap-4 lg:gap-6 font-lexend text-center sm:text-left lg:px-3">
+              <button class="bg-white text-black px-4 py-2 rounded-3xl font-semibold">Stream now</button>
+              <div class="flex flex-col sm:flex-col md:flex-row md:items-center gap-1 sm:gap-1.5 md:gap-2 lg:gap-3">
+                <h1 class="font-bold text-base md:text-xl lg:text-2xl">Thriller</h1>
+                <p class="text-sm md:text-lg lg:text-xl">The World's most dangerous secret lies between them</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poster 2 -->
+        <div class="relative shrink-0 w-[70vw] h-[90vw] sm:w-[400px] sm:h-[400px] md:w-[580px] md:h-[500px] lg:w-[800px] lg:h-[580px] xl:w-[1250px] xl:h-[660px]">
+          <img alt="Movie 2" class="w-full h-full object-cover block sm:hidden" src="./images/severence_small.jpg">
+          <img alt="Movie 2" class="w-full h-full object-cover hidden sm:block" src="./images/Movie_poster_1.jpg">
+          <div class="absolute bottom-4 left-3 right-3 text-white">
+            <div class="flex flex-col sm:flex-row items-center sm:items-start lg:items-center gap-2 sm:gap-4 lg:gap-6 font-lexend text-center sm:text-left lg:px-3">
+              <button class="bg-white text-black px-4 py-2 rounded-3xl font-semibold">Stream now</button>
+              <div class="flex flex-col sm:flex-col md:flex-row md:items-center gap-1 sm:gap-1.5 md:gap-2 lg:gap-3">
+                <h1 class="font-bold text-base md:text-xl lg:text-2xl">Thriller</h1>
+                <p class="text-sm md:text-lg lg:text-xl">There's more to work than life.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poster 3 -->
+        <div class="relative shrink-0 w-[70vw] h-[90vw] sm:w-[400px] sm:h-[400px] md:w-[580px] md:h-[500px] lg:w-[800px] lg:h-[580px] xl:w-[1250px] xl:h-[660px]">
+          <img alt="Movie 3" class="w-full h-full object-cover block sm:hidden" src="./images/silo_small.jpg">
+          <img alt="Movie 3" class="w-full h-full object-cover hidden sm:block" src="./images/Movie_poster_4.jpg">
+          <div class="absolute bottom-4 left-3 right-3 text-white">
+            <div class="flex flex-col sm:flex-row items-center sm:items-start lg:items-center gap-2 sm:gap-4 lg:gap-6 font-lexend text-center sm:text-left lg:px-3">
+              <button class="bg-white text-black px-4 py-2 rounded-3xl font-semibold">Stream now</button>
+              <div class="flex flex-col sm:flex-col md:flex-row md:items-center gap-1 sm:gap-1.5 md:gap-2 lg:gap-3">
+                <h1 class="font-bold text-base md:text-xl lg:text-2xl">Sci-Fi</h1>
+                <p class="text-sm md:text-lg lg:text-xl">The Truth will suffice.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poster 4 -->
+        <div class="relative shrink-0 w-[70vw] h-[90vw] sm:w-[400px] sm:h-[400px] md:w-[580px] md:h-[500px] lg:w-[800px] lg:h-[580px] xl:w-[1250px] xl:h-[660px]">
+          <img alt="Movie 4" class="w-full h-full object-cover block sm:hidden" src="./images/slow_small.jpg">
+          <img alt="Movie 4" class="w-full h-full object-cover hidden sm:block" src="./images/Movie_poster_5.jpg">
+          <div class="absolute bottom-4 left-3 right-3 text-white">
+            <div class="flex flex-col sm:flex-row items-center sm:items-start lg:items-center gap-2 sm:gap-4 lg:gap-6 font-lexend text-center sm:text-left lg:px-3">
+              <button class="bg-white text-black px-4 py-2 rounded-3xl font-semibold">Stream now</button>
+              <div class="flex flex-col sm:flex-col md:flex-row md:items-center gap-1 sm:gap-1.5 md:gap-2 lg:gap-3">
+                <h1 class="font-bold text-base md:text-xl lg:text-2xl">Thriller</h1>
+                <p class="text-sm md:text-lg lg:text-xl">Old sins cast new shadows.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poster 5 -->
+        <div class="relative shrink-0 w-[70vw] h-[90vw] sm:w-[400px] sm:h-[400px] md:w-[580px] md:h-[500px] lg:w-[800px] lg:h-[580px] xl:w-[1250px] xl:h-[660px]">
+          <img alt="Movie 5" class="w-full h-full object-cover block sm:hidden" src="./instigator_small.jpg">
+          <img alt="Movie 5" class="w-full h-full object-cover hidden sm:block" src="./images/Movie_poster_6.jpg">
+          <div class="absolute bottom-4 left-3 right-3 text-white">
+            <div class="flex flex-col sm:flex-row items-center sm:items-start lg:items-center gap-2 sm:gap-4 lg:gap-6 font-lexend text-center sm:text-left lg:px-3">
+              <button class="bg-white text-black px-4 py-2 rounded-3xl font-semibold">Stream now</button>
+              <div class="flex flex-col sm:flex-col md:flex-row md:items-center gap-1 sm:gap-1.5 md:gap-2 lg:gap-3">
+                <h1 class="font-bold text-base md:text-xl lg:text-2xl">Action</h1>
+                <p class="text-sm md:text-lg lg:text-xl">Worst. Heist. Ever.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poster 6 -->
+        <div class="relative shrink-0 w-[70vw] h-[90vw] sm:w-[400px] sm:h-[400px] md:w-[580px] md:h-[500px] lg:w-[800px] lg:h-[580px] xl:w-[1250px] xl:h-[660px]">
+          <img alt="Movie 6" class="w-full h-full object-cover block sm:hidden" src="./fountain_small.jpg">
+          <img alt="Movie 6" class="w-full h-full object-cover hidden sm:block" src="./images/Movie_poster_3.jpg">
+          <div class="absolute bottom-4 left-3 right-3 text-white">
+            <div class="flex flex-col sm:flex-row items-center sm:items-start lg:items-center gap-2 sm:gap-4 lg:gap-6 font-lexend text-center sm:text-left lg:px-3">
+              <button class="bg-white text-black px-4 py-2 rounded-3xl font-semibold">Stream now</button>
+              <div class="flex flex-col sm:flex-col md:flex-row md:items-center gap-1 sm:gap-1.5 md:gap-2 lg:gap-3">
+                <h1 class="font-bold text-base md:text-xl lg:text-2xl">Action</h1>
+                <p class="text-sm md:text-lg lg:text-xl">It's only a legend, until you discover it.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Indicators -->
+    <div class="relative mt-4 mb-6 h-4">
+      <div class="absolute left-1/2 -translate-x-1/2 flex gap-2 items-center">
+        <span class="w-2 h-2 rounded-full bg-gray-400"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-400"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-400"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-800"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-400"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-400"></span>
+      </div>
+      <div class="absolute right-4 top-1/2 -translate-y-1/2 z-10">
+        <div class="text-[10px] rounded-full bg-gray-300 p-2 text-gray-900 flex items-center justify-center shadow">
+          <!-- Play Icon -->
+          <svg stroke="currentColor" fill="currentColor" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-100 text-gray-600 text-[13px] leading-relaxed">
+  <!-- Info Section -->
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <p class="text-justify">
+      ◊No Cost EMI is available with the purchase of an eligible product made using qualifying cards on 3-, 6-, 9- or 12-month tenures... <u>Terms apply</u>.
+    </p>
+
+    <h4 class="mt-6 font-semibold">Representative example:</h4>
+    <p class="mt-2">A purchase of ₹79,900.00 repaid over 12 months with 15.99% p.a. interest and No Cost EMI savings of ₹6,514.00 requires monthly payments of ₹6,658.00. Total payable: ₹79,900.00.</p>
+
+    <p class="mt-6">‡Instant cashback is available with qualifying American Express, Axis Bank, and ICICI Bank cards only... <u>Click here</u> for eligible devices.</p>
+    <p class="mt-6">*Apple Education Pricing is available to college students and educators. More info at <u>apple.com/in-edu/store</u>.</p>
+    <p class="mt-6">1. Qualified Purchasers can receive Promotion Savings when they purchase an eligible Mac or iPad... terms apply <u>here</u>.</p>
+    <p class="mt-6">2. Available in two models: AirPods 4 and AirPods 4 with Active Noise Cancellation.</p>
+    <p class="mt-6">Apple Intelligence is available in beta on selected iPhones, iPads, and Macs as part of the iOS 18/iPadOS 18/macOS Sequoia update.</p>
+    <p class="mt-6">A subscription is required for Apple TV+.</p>
+    <p class="mt-6">Features may vary by region and language.</p>
+
+    <hr class="mt-6 border-gray-300">
+  </div>
+
+  <!-- Links Section -->
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between gap-8 py-10">
+    <!-- Column 1 -->
+    <div class="min-w-[150px]">
+      <h4 class="font-bold mb-2">Shop and Learn</h4>
+      <ul class="space-y-1">
+        <li>Store</li><li>Mac</li><li>iPad</li><li>iPhone</li><li>Watch</li><li>AirPods</li><li>TV & Home</li><li>AirTag</li><li>Accessories</li><li>Gift Cards</li>
+      </ul>
+      <h4 class="font-bold mt-4 mb-2">Apple Wallet</h4>
+      <ul class="space-y-1"><li>Wallet</li></ul>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="min-w-[150px]">
+      <h4 class="font-bold mb-2">Account</h4>
+      <ul class="space-y-1"><li>Manage Your Apple ID</li><li>Apple Store Account</li><li>iCloud.com</li></ul>
+      <h4 class="font-bold mt-4 mb-2">Entertainment</h4>
+      <ul class="space-y-1">
+        <li>Apple One</li><li>Apple TV+</li><li>Apple Music</li><li>Apple Arcade</li><li>Apple Podcasts</li><li>Apple Books</li><li>App Store</li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="min-w-[150px]">
+      <h4 class="font-bold mb-2">Apple Store</h4>
+      <ul class="space-y-1">
+        <li>Find a Store</li><li>Genius Bar</li><li>Today at Apple</li><li>Group Reservations</li><li>Apple Camp</li><li>Apple Trade In</li>
+        <li>Ways to Buy</li><li>Recycling Programme</li><li>Order Status</li><li>Shopping Help</li>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="min-w-[150px]">
+      <h4 class="font-bold mb-2">For Business</h4>
+      <ul class="space-y-1"><li>Apple and Business</li><li>Shop for Business</li></ul>
+
+      <h4 class="font-bold mt-4 mb-2">For Education</h4>
+      <ul class="space-y-1"><li>Apple and Education</li><li>Shop for Education</li><li>Shop for University</li></ul>
+
+      <h4 class="font-bold mt-4 mb-2">For Healthcare</h4>
+      <ul class="space-y-1"><li>Apple and Healthcare</li><li>Mac in Healthcare</li><li>Health on Apple Watch</li></ul>
+    </div>
+
+    <!-- Column 5 -->
+    <div class="min-w-[150px]">
+      <h4 class="font-bold mb-2">Apple Values</h4>
+      <ul class="space-y-1"><li>Accessibility</li><li>Education</li><li>Environment</li><li>Privacy</li><li>Supply Chain Innovation</li></ul>
+
+      <h4 class="font-bold mt-4 mb-2">About Apple</h4>
+      <ul class="space-y-1"><li>Newsroom</li><li>Apple Leadership</li><li>Careers</li><li>Investors</li><li>Ethics & Compliance</li><li>Events</li><li>Contact Apple</li></ul>
+    </div>
+  </div>
+
+  <!-- Bottom Notice -->
+  <div class="bg-gray-200">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-[13px]">
+      <p class="mb-3">
+        More ways to shop:
+        <a href="#" class="text-blue-600 underline">Find an Apple Store</a> or
+        <a href="#" class="text-blue-600 underline">other retailer</a> near you. Or call
+        <a href="#" class="text-blue-600 underline">000800 040 1966</a>.
+      </p>
+      <hr class="border-gray-300 mb-3">
+
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 flex-wrap">
+        <div class="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 flex-wrap">
+          <p>&copy; 2025 Apple Inc. All rights reserved.</p>
+          <p class="text-gray-500">Privacy Policy | Terms of Use | Sales Policy | Legal | Site Map</p>
+        </div>
+        <p class="whitespace-nowrap">India</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
+</body>
+</html>
